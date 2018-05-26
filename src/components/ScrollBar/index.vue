@@ -2,6 +2,7 @@
 <template>
   <div class="scroll-container" ref="scrollContainer" @wheel.prevent="handleScroll" >
     <div class="scroll-wrapper" ref="scrollWrapper" :style="{top: top + 'px'}">
+      <!--插槽容纳菜单内容-->
       <slot></slot>
     </div>
   </div>

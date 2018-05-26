@@ -1,8 +1,12 @@
+<!--主页面-->
 <template>
   <div class="app-wrapper" :class="{hideSidebar:!sidebar.opened}">
+    <!--左边菜单栏-->
     <sidebar class="sidebar-container"></sidebar>
     <div class="main-container">
+      <!--头部-->
       <navbar></navbar>
+      <!--内容-->
       <app-main></app-main>
     </div>
   </div>
@@ -27,7 +31,7 @@ export default {
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-@import "src/styles/mixin.scss";
+@import '../../styles/mixin.scss';
 .app-wrapper {
   @include clearfix;
   position: relative;
