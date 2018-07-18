@@ -10,11 +10,20 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
-
+    proxyTable: {
+      '/fms-web': {
+        target: 'http://192.168.1.252:8080/fms-web/',
+        // 'http://192.168.1.252:8080/fms-web/
+        //  'http://47.92.149.51/fms-web/'
+        changeOrigin: true,
+        pathRewrite: {
+          '^/fms\-web': ''
+        }
+      }
+    },
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 9528, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors: false,

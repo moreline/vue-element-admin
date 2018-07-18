@@ -14,7 +14,11 @@ body {
 html {
   box-sizing: border-box;
 }
-
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 *,
 *:before,
 *:after {
@@ -51,9 +55,11 @@ a:hover {
 
 //main-container全局样式
 .app-main{
-  min-height: 100%
-}
+  min-height: 100%;
+  //margin-top: 50px;
 
+}
 .app-container {
   padding: 20px;
+  margin-top: 60px;
 }
