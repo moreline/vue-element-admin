@@ -38,7 +38,6 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
   import Hamburger from '@/components/Hamburger'
   export default {
     name: 'SidebarItem',
@@ -54,15 +53,18 @@
         default: false
       }
     },
+    data(){
+      return{
+        sidebar:{
+          opened:true
+        }
+      }
+    },
     computed: {
-      ...mapGetters([
-        'sidebar',
-        'avatar'
-      ])
     },
     methods:{
       toggleSideBar() {
-        this.$store.dispatch('ToggleSideBar')
+        // this.$store.dispatch('ToggleSideBar')
       },
     }
   }

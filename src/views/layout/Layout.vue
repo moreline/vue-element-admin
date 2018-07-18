@@ -1,6 +1,7 @@
 <!--主页面-->
 <template>
-  <div class="app-wrapper" :class="{hideSidebar:!sidebar.opened}">
+  <div class="app-wrapper">
+    <!--:class="{hideSidebar:!sidebar.opened}"-->
     <!--头部-->
     <navbar></navbar>
     <div class="main-container">
@@ -23,9 +24,7 @@
       AppMain
     },
     computed: {
-      sidebar() {
-        return this.$store.state.app.sidebar
-      }
+
     }
   }
 </script>

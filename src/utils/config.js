@@ -1,5 +1,5 @@
 import axios from 'axios'
-import router from './router'
+import router from '../router/index'
 
 const api = {
   url: '/fms-web/',
@@ -25,7 +25,8 @@ const api = {
         // 判断是否session存在
         if (response.data.msg == 'session不存在') {
           this.cookie.removeAll()
-          location.href = '/'
+          this.$router.push('/login')
+          // location.href = '/'
           return false
         }
         alert(response.data.msg)

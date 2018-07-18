@@ -13,7 +13,7 @@ import router from './router'
 
 import '@/icons' // icon
 // import '@/permission' // permission control
-
+import api from './utils/config.js'
 Vue.use(ElementUI, { locale })
 
 Vue.config.productionTip = false
@@ -21,6 +21,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  api,
   template: '<App/>',
   components: { App }
 })

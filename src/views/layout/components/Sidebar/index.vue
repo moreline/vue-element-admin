@@ -8,16 +8,19 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 import SidebarItem from './SidebarItem'
 import ScrollBar from '@/components/ScrollBar'
 
 export default {
   components: { SidebarItem, ScrollBar },
+  data(){
+    return{
+      sidebar:{
+        opened:true
+      }
+    }
+  },
   computed: {
-    ...mapGetters([
-      'sidebar'
-    ]),
     routes() {
       console.log(this.$router)
       return this.$router.options.routes

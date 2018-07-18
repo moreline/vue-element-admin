@@ -8,14 +8,14 @@
         <span class="svg-container svg-container_login">
           <svg-icon icon-class="user" />
         </span>
-        <el-input name="username" type="text" v-model="loginForm.userName" autoComplete="on" placeholder="username" />
+        <el-input name="username" type="text" v-model="loginForm.userName" autoComplete="on" placeholder="账号" />
       </el-form-item>
       <el-form-item prop="password">
         <span class="svg-container">
           <svg-icon icon-class="password"></svg-icon>
         </span>
         <el-input name="password" :type="pwdType" @keyup.enter.native="handleLogin" v-model="loginForm.userPwd" autoComplete="on"
-          placeholder="password"></el-input>
+          placeholder="密码"></el-input>
           <span class="show-pwd"><svg-icon icon-class="eye" /></span>
         <!--@click="showPwd"-->
       </el-form-item>
@@ -33,7 +33,8 @@
 </template>
 
 <script>
-export default {
+  import api from '../../utils/config.js'
+  export default {
   name: 'login',
   data() {
     // const validateUsername = (rule, value, callback) => {
@@ -75,7 +76,10 @@ export default {
     //   }
     // },
     handleLogin() {
-
+      this.$router.push('/dashboard')
+      // api.post('login', this.loginForm, (data) => {
+      //   console.log(data)
+      // })
     }
   }
 }

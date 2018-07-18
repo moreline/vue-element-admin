@@ -35,10 +35,6 @@
 </template>
 
 <script>
-  import {mapGetters} from 'vuex'
-  // import Breadcrumb from '@/components/Breadcrumb'
-  // import Hamburger from '@/components/Hamburger'
-
   export default {
     components: {},
     data() {
@@ -49,17 +45,10 @@
       }
     },
     computed: {
-      ...mapGetters([
-        'sidebar',
-        'avatar'
-      ])
     },
     methods: {
       // 退出登录
       logout() {
-        this.$store.dispatch('LogOut').then(() => {
-          location.reload() // 为了重新实例化vue-router对象 避免bug
-        })
       },
       // 通知
       tipsShowList(){

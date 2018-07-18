@@ -6,15 +6,16 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'dashboard',
+  data(){
+    return {
+      name:'',
+      roles:[]
+    }
+  },
   computed: {
-    ...mapGetters([
-      'name',
-      'roles'
-    ])
   }
 }
 </script>
