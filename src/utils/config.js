@@ -25,8 +25,8 @@ const api = {
         // 判断是否session存在
         if (response.data.msg == 'session不存在') {
           this.cookie.removeAll()
-          this.$router.push('/login')
-          // location.href = '/'
+          // this.$router.push('/login')
+          location.href = '/'
           return false
         }
         alert(response.data.msg)

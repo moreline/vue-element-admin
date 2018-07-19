@@ -35,6 +35,7 @@
 </template>
 
 <script>
+  import api from '../../../utils/config.js'
   export default {
     components: {},
     data() {
@@ -44,16 +45,23 @@
         groupName:''
       }
     },
-    computed: {
-    },
-    methods: {
-      // 退出登录
+    methods:{
+      /**
+       * 点击退出登录方法
+       */
       logout() {
+        api.post('logout', this.form)
+        api.cookie.removeAll()
       },
       // 通知
       tipsShowList(){
 
       }
+    },
+    mounted(){
+      /**
+       * 获取用户信息头像、名字、机构名
+       */
     }
   }
 </script>
